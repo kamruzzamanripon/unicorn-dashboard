@@ -7,7 +7,7 @@
             <div>
 
                 <button type="button"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-2 lg:px-5 lg:py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 flex items-center space-x-3"
+                    class="text-white bg-[#4E46B4] hover:bg-blue-800 focus:ring-4 font-medium rounded-lg text-sm px-2 py-2 lg:px-5 lg:py-2.5 me-2 mb-2 dark:bg-[#4E46B4] focus:outline-none dark:focus:ring-blue-800 flex items-center space-x-3"
                     @click="openUnicornCreateModal">
                     <StopIcon class="w-7 hidden lg:block" />
                     <span>Create Unicorn</span>
@@ -19,7 +19,7 @@
         <!-- Doctor card Info -->
         <div class="space-y-3">
 
-            <div class="" v-if="unicornData.length > 0">
+            <div v-if="unicornData.length > 0">
                 <select class="w-52 p-2 rounded-md" @change="sortUnicorns($event)">
                     <option value="">Sorting Option </option>
                     <option value="deesc">Descending </option>
@@ -39,8 +39,18 @@
             <div class="flex flex-col bg-orange-300 rounded-md shadow-md p-3" v-if="unicornData.length == 0">
                 <p class="font-bold text-center p-2">This App run by CRUD Api. If Data didn't show then create a unicorn
                     item Or create new unique id below this site and replace in env file </p>
-                <a href="https://crudcrud.com/" target="_blank" class="text-center text-blue-800 font-medium">CRUD Api
+                <a href="https://crudcrud.com/" target="_blank" class="text-center text-[#4E46B4] font-medium">CRUD Api
                     site Link</a>
+
+                <br>
+                <div class="flex flex-col space-y-4">
+                    <input class="h-8 px-4" type="text" placeholder="Type CRUD Unique Id" v-model="crudUniqueId">
+                    <div class="flex justify-center">
+                        <button class="bg-green-700 w-28 text-white p-2 rounded-md"
+                            @click="submitCrudId">Submit</button>
+                    </div>
+                </div>
+
             </div>
         </div>
         <!-- End Doctor card Info -->
@@ -76,8 +86,9 @@ export default {
 
     data() {
         return {
+            crudUniqueId: '',
             showUnicornCreateModal: false,
-            unicornStore: useUnicornStore()
+            unicornStore: useUnicornStore(),
 
         }
     },
@@ -98,6 +109,25 @@ export default {
             const option = event.target.value;
             console.log('sortUnicorns', option)
             this.unicornStore.sortUnicorns(option);
+        },
+        async submitCrudId() {
+            if (this.crudUniqueId.trim() === '') {
+                alert('Please enter a valid CRUD unique ID.');
+                return;
+            }
+
+            // Save the ID in localStorage
+            localStorage.setItem('VITE_CRUD_UNIQUE_ID', this.crudUniqueId);
+            alert('CRUD Unique ID saved successfully!');
+            let Id = this.crudUniqueId
+            await this.unicornStore.updateUniqueId(Id)
+            let data = {
+                "age": "30",
+                "name": "jone Doe",
+                "colour": "blue"
+            }
+            await this.unicornStore.createUnicorn(data);
+            await this.unicornStore.getAllUnicornData();
         },
 
     },
