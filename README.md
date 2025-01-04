@@ -1,6 +1,24 @@
-# Unicorn App Overview
+# 📝 Unicorn App Overview
 
-This App is a Vue.js web application that allows users to run CRUD operations on Unicorn data served via REST API. Here I used https://crudcrud.com/ API. This App has a lot of facilities. like, Pagination, Sorting feature, search feature, item create and update modal, Loader page ect.
+This application is a Vue.js web application designed for managing Unicorn data through seamless CRUD (Create, Read, Update, Delete) operations, powered by a REST API provided by crudcrud.com.
+
+The app comes packed with a variety of features to enhance usability and functionality:
+
+- Pagination: Efficiently manage large datasets by navigating through pages.
+
+- Sorting: Organize data dynamically based on specific fields.
+
+- Search Functionality: Quickly locate records using the search feature.
+
+- Item Management Modals: Create and update records with user-friendly modals.
+
+- Loading Indicator: A smooth loader page enhances the user experience during data operations.
+
+With these features, this application ensures a modern and efficient way to interact with Unicorn data, making it ideal for managing and visualizing information effortlessly.
+
+## 📋 Detailed Workflow Description:
+
+![This is a alt text.](/public/screenshort/Screenshot_13.jpg)
 
 ## Instructions on how to install and run your application locally
 
@@ -12,13 +30,12 @@ This App is a Vue.js web application that allows users to run CRUD operations on
 - npm run dev
 ```
 
-# Overview App
-
 ## Default page
 
 ![This is a alt text.](/public/screenshort/Screenshot_11.jpg)
 
-### Note: This is Primary state. So, you need unique id from https://crudcrud.com . Go to this site and take id and repleace on your env file. First rename example.env file as .env then replace your Id. Then create some item.
+> [!Important]
+> This is Primary state. So, you need unique id from https://crudcrud.com . Go to this site and take id and repleace on your env file. First rename example.env file as .env then replace your Id. Then create some item.
 
 ## After Create Item then this page will look like.
 
@@ -96,3 +113,8 @@ The structure reflects the following principles:
     - Search feature add.
     - When delete item then show alert.
     - when create or update any item then show success message.
+    
+
+## 📜 License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
