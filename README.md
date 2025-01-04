@@ -79,7 +79,7 @@ With these features, this application ensures a modern and efficient way to inte
 
 ### That's a short brief about this app. I hope you are enjoying it.
 
-## 🍎 Explanation of your application structure and design choices.
+## 🍎 Explanation of application structure and design choices.
 
 ### 📁 Directory Structure
 
