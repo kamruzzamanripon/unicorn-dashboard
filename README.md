@@ -20,7 +20,7 @@ With these features, this application ensures a modern and efficient way to inte
 
 ![This is a alt text.](/public/screenshort/Screenshot_13.jpg)
 
-## Instructions on how to install and run your application locally
+## 🚩 Instructions on how to install and run your application locally
 
 ```
 - Clone this repository on your local drive.
@@ -30,63 +30,63 @@ With these features, this application ensures a modern and efficient way to inte
 - npm run dev
 ```
 
-## Default page
+## 🦄 Default page
 
-![This is a alt text.](/public/screenshort/Screenshot_11.jpg)
+![This is a alt text.](/public/screenshort/Screenshot_14.jpg)
 
 > [!Important]
-> This is Primary state. So, you need unique id from https://crudcrud.com . Go to this site and take id and repleace on your env file. First rename example.env file as .env then replace your Id. Then create some item.
+> This is Primary state. So, you need unique id from https://crudcrud.com . Go to this site, take id and then paste this into the input text field
 
-## After Create Item then this page will look like.
+## 🦄 After Create Item then this page will look like.
 
 ![This is a alt text.](/public/screenshort/Screenshot_1.jpg)
 
-## Create Modal.
+## 🦄 Create Modal.
 
 ![This is a alt text.](/public/screenshort/Screenshot_2.jpg)
 
-## Validation Check before submit.
+## 🦄 Validation Check before submit.
 
 ![This is a alt text.](/public/screenshort/Screenshot_3.jpg)
 
-## Show success message right bottom side.
+## 🦄 Show success message right bottom side.
 
 ![This is a alt text.](/public/screenshort/Screenshot_4.jpg)
 
-## Edit Modal.
+## 🦄 Edit Modal.
 
 ![This is a alt text.](/public/screenshort/Screenshot_5.jpg)
 
-## Before Delete Item show alert.
+## 🦄 Before Delete Item show alert.
 
 ![This is a alt text.](/public/screenshort/Screenshot_6.jpg)
 
-## After confirm delete item then show message right bottom side.
+## 🦄 After confirm delete item then show message right bottom side.
 
 ![This is a alt text.](/public/screenshort/Screenshot_7.jpg)
 
-## Sorting feature add.
+## 🦄 Sorting feature add.
 
 ![This is a alt text.](/public/screenshort/Screenshot_8.jpg)
 
-## Search feature add.
+## 🦄 Search feature add.
 
 ![This is a alt text.](/public/screenshort/Screenshot_9.jpg)
 
-## Loader page add.
+## 🦄 Loader page add.
 
 ![This is a alt text.](/public/screenshort/Screenshot_10.jpg)
 
 ### That's a short brief about this app. I hope you are enjoying it.
 
-## Explanation of your application structure and design choices.
+## 🍎 Explanation of your application structure and design choices.
 
-### Directory Structure
+### 📁 Directory Structure
 
 Below is the directory structure of the project with explanations for each folder and its responsibilities:
 ![This is a alt text.](/public/screenshort/Screenshot_12.jpg)
 
-### Design Choices
+### 🧐 Design Choices
 
 The structure reflects the following principles:
 
@@ -102,18 +102,17 @@ The structure reflects the following principles:
 4. State Management:
    - The stores/ directory handles global state, ensuring components remain stateless and testable.
 
-### challenges
+### 💪 challenges
 
     - Pagination Mechanism. In every request, I didn't know how many pages I got and there is no meta data about pagination.
     - Search feature add without call again api. Its do search inside data stored in pinia.
 
-### Bonus
+### 🌱 Bonus
 
     - Pinia store add.
     - Search feature add.
     - When delete item then show alert.
     - when create or update any item then show success message.
-    
 
 ## 📜 License
 
